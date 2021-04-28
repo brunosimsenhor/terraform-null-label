@@ -1,7 +1,7 @@
 locals {
 
   defaults = {
-    label_order         = ["namespace", "environment", "stage", "name", "attributes"]
+    label_order         = ["name", "namespace", "environment", "stage", "attributes"]
     regex_replace_chars = "/[^-a-zA-Z0-9]/"
     delimiter           = "-"
     replacement         = ""
