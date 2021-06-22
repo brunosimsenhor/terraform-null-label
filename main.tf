@@ -94,9 +94,10 @@ locals {
 
   generated_tags = {
     for l in keys(local.tags_context) :
-    local.label_key_case == "upper" ? upper(l) : (
-      local.label_key_case == "lower" ? lower(l) : title(lower(l))
-    ) => local.tags_context[l] if length(local.tags_context[l]) > 0
+    lower(l) == "name" ? "Name" :
+      (local.label_key_case == "upper" ? upper(l) : (
+        local.label_key_case == "lower" ? lower(l) : title(lower(l))
+      )) => local.tags_context[l] if length(local.tags_context[l]) > 0
   }
 
   id_context = {
