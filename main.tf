@@ -7,8 +7,8 @@ locals {
     replacement         = ""
     id_length_limit     = 0
     id_hash_length      = 5
-    label_key_case      = "title"
-    label_value_case    = "lower"
+    label_key_case      = "lower"
+    label_value_case    = "none"
   }
 
   # So far, we have decided not to allow overriding replacement or id_hash_length
